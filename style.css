@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Underdog&display=swap');
+
+:root{
+    --background-color: rgb(255, 255, 255);
+    --secondary-background-color: rgb(255, 255, 255);
+    --button-background-color: rgb(0, 0, 0);
+
+}
+
+
+.underdog-regular {
+    font-family: "Underdog", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  * {
+    font-family: "Underdog", system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(90deg, #19052e,#0f9999,#0a1d7b); background: linear-gradient(90deg, #19052e,#0f9999,#0a1d7b);
+                                                                                        
+  }
+
+  .container {
+    width: 100%;
+    max-width: 800px;
+
+  }
+
+  .weather-app {
+    background-color: var(--background-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 4px 4px 8px 8px   black rgba(34, 60,80, 0,2);
+
+  }
+
+  .search-box {
+    display: flex;
+    margin-bottom: 10px;
+    >input {
+        flex: 1;
+        height: 40px;
+        border: none;
+        padding: 0px 15px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-size: 15px;
+        background-color: var(--secondary-background-color);
+
+    }
+    >button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: rgb(255, 255, 255);
+        background-color: var(--button-background-color);
+        cursor: pointer;
+
+    }
+  }
+
+  .weather-info {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .temp-info {
+    margin-bottom: 15px;
+
+    >img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    >h1 {
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+
+    >p {
+        font-size: 10px;
+        text-transform: capitalize;
+    }
+    
+  }
+  
+  .details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .city-info {
+    margin-bottom: 15px;
+    >h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    >p{
+        font-size: 14px;
+    }
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+
+    >i {
+        color: white;
+        font-size: 14px;
+        margin: 10px;
+
+    }
+
+    >div {
+        >p:first-child{
+            font-weight: 900;
+            margin: 8px;
+
+        }
+    }
+
+  }
+
+  .forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .forecast-item {
+    flex: 1;
+    text-align: center;
+    background-color: rgb(240, 244, 248);
+    border-radius: 15px;
+    padding: 10px 5px;
+
+    >h3 {
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+
+    >img {
+        width: 50px;
+        height: 50px;
+    }
+
+    >p {
+        font-size: 16px;
+        font-weight: 900;
+    }
+  }
